@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Payment | Pet Mart</title>
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header-logined.html");
+        </script>
+
+        <!-- MAIN -->
+        <main class="checkout-page">
+            <div class="container">
+                <!-- Search bar -->
+                <div class="checkout-container">
+                    <div class="search-bar d-none d-md-flex">
+                        <input type="text" name="" id="" placeholder="Search for item" class="search-bar__input" />
+                        <button class="search-bar__submit">
+                            <img src="./assets/icons/search.svg" alt="" class="search-bar__icon icon" />
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Breadcrumbs -->
+                <div class="checkout-container">
+                    <ul class="breadcrumbs checkout-page__breadcrumbs">
+                        <li>
+                            <a href="./index-logined.html" class="breadcrumbs__link">
+                                Trang chủ
+                                <img src="./assets/icons/arrow-right.svg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./checkout.html" class="breadcrumbs__link">
+                                Thanh toán
+                                <img src="./assets/icons/arrow-right.svg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./shipping.html" class="breadcrumbs__link">
+                                Vận chuyển
+                                <img src="./assets/icons/arrow-right.svg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Phương thức thanh toán</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Checkout content -->
+                <div class="checkout-container">
+                    <div class="row gy-xl-3">
+                        <div class="col-8 col-xl-8 col-lg-12">
+                            <div class="cart-info">
+                                <div class="cart-info__top">
+                                    <h2 class="cart-info__heading cart-info__heading--lv2">
+                                        1. Vận chuyển, dự kiến đến: Thứ tư 15/5 — Thứ bảy 18/5
+                                    </h2>
+                                    <a class="cart-info__edit-btn" href="./shipping.html">
+                                        <img class="icon" src="./assets/icons/edit.svg" alt="" />
+                                        Chỉnh sửa
+                                    </a>
+                                </div>
+
+                                <!-- Payment item 1 -->
+                                <article class="payment-item">
+                                    <div class="payment-item__info">
+                                        <h3 class="payment-item__title">Admin 1</h3>
+                                        <p class="payment-item__desc">
+                                            01 Võ Văn Ngân, Linh Chiểu, Thủ Đức, Thành phố Hồ Chí Minh
+                                        </p>
+                                    </div>
+                                </article>
+
+                                <!-- Payment item 2 -->
+                                <article class="payment-item">
+                                    <div class="payment-item__info">
+                                        <h3 class="payment-item__title">Chi tiết sản phẩm</h3>
+                                        <p class="payment-item__desc">3 sản phẩm</p>
+                                    </div>
+                                    <a href="./shipping.html" class="payment-item__detail">View details</a>
+                                </article>
+                            </div>
+
+                            <div class="cart-info">
+                                <h2 class="cart-info__heading cart-info__heading--lv2">2. Phương thức vận chuyển</h2>
+                                <div class="cart-info__separate"></div>
+                                <h3 class="cart-info__sub-heading">Phương thức vận chuyển khả dụng</h3>
+
+                                <!-- Payment item 3 -->
+                                <label>
+                                    <article class="payment-item payment-item--pointer">
+                                        <img
+                                            src="./assets/img/payment/delivery-2.jpg"
+                                            alt=""
+                                            class="payment-item__thumb"
+                                        />
+                                        <div class="payment-item__content">
+                                            <div class="payment-item__info">
+                                                <h3 class="payment-item__title">Giao hàng tiết kiệm</h3>
+                                                <p class="payment-item__desc payment-item__desc--low">
+                                                    Vận chuyển: 5-7 ngày làm việc
+                                                </p>
+                                            </div>
+
+                                            <span class="cart-info__checkbox payment-item__checkbox">
+                                                <input
+                                                    type="radio"
+                                                    name="delivery-method"
+                                                    checked
+                                                    class="cart-info__checkbox-input payment-item__checkbox-input"
+                                                />
+                                                <span class="payment-item__cost">Miễn phí</span>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </label>
+
+                                <!-- Payment item 4 -->
+                                <label>
+                                    <article class="payment-item payment-item--pointer">
+                                        <img
+                                            src="./assets/img/payment/delivery-1.jfif"
+                                            alt=""
+                                            class="payment-item__thumb"
+                                        />
+                                        <div class="payment-item__content">
+                                            <div class="payment-item__info">
+                                                <h3 class="payment-item__title">Giao hàng nhanh</h3>
+                                                <p class="payment-item__desc payment-item__desc--low">
+                                                    Vận chuyển: 2-3 ngày làm việc
+                                                </p>
+                                            </div>
+
+                                            <span class="cart-info__checkbox payment-item__checkbox">
+                                                <input
+                                                    type="radio"
+                                                    name="delivery-method"
+                                                    class="cart-info__checkbox-input payment-item__checkbox-input"
+                                                />
+                                                <span class="payment-item__cost">40.000đ</span>
+                                            </span>
+                                        </div>
+                                    </article>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-4 col-xl-4 col-lg-12">
+                            <div class="cart-info">
+                                <h2 class="cart-info__heading cart-info__heading--lv2">Chi tiết thanh toán</h2>
+                                <p class="cart-info__desc">
+                                    Hoàn thành thanh toán bằng cách cung cấp các thông tin thanh toán.
+                                </p>
+                                <form action="" class="form cart-info__form">
+                                    <div class="form__group">
+                                        <label for="email" class="form__label form__label--medium">Email Address</label>
+                                        <div class="form__text-input">
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                id="email"
+                                                placeholder="Email"
+                                                class="form__input"
+                                                required
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon-error"
+                                            />
+                                        </div>
+                                        <p class="form__error">Email không đúng định dạng</p>
+                                    </div>
+                                    <div class="form__group">
+                                        <label for="card-holder" class="form__label form__label--medium">
+                                            Tên chủ thẻ
+                                        </label>
+                                        <div class="form__text-input">
+                                            <input
+                                                type="text"
+                                                name="card-holder"
+                                                id="card-holder"
+                                                placeholder="Card Holder"
+                                                class="form__input"
+                                                required
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon-error"
+                                            />
+                                        </div>
+                                        <!-- <p class="form__error">Password must be at least 6 characters</p> -->
+                                    </div>
+                                    <div class="form__group">
+                                        <label for="card-details" class="form__label form__label--medium">
+                                            Số thẻ
+                                        </label>
+                                        <div class="form__text-input">
+                                            <input
+                                                type="text"
+                                                name="card-details"
+                                                id="card-details"
+                                                placeholder="Card Details"
+                                                class="form__input"
+                                                required
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon-error"
+                                            />
+                                        </div>
+                                        <!-- <p class="form__error">Password must be at least 6 characters</p> -->
+                                    </div>
+                                    <div class="form__row cart-info__form-row">
+                                        <div class="form__group">
+                                            <div class="form__text-input">
+                                                <input
+                                                    type="text"
+                                                    name="card-expire"
+                                                    id="card-expire"
+                                                    placeholder="MM/YY"
+                                                    class="form__input"
+                                                    required
+                                                />
+                                                <img
+                                                    src="./assets/icons/form-error.svg"
+                                                    alt=""
+                                                    class="form__input-icon-error"
+                                                />
+                                            </div>
+                                            <!-- <p class="form__error">Password must be at least 6 characters</p> -->
+                                        </div>
+                                        <div class="form__group">
+                                            <div class="form__text-input">
+                                                <input
+                                                    type="text"
+                                                    name="card-cvc"
+                                                    id="card-cvc"
+                                                    placeholder="CVC"
+                                                    class="form__input"
+                                                    required
+                                                />
+                                                <img
+                                                    src="./assets/icons/form-error.svg"
+                                                    alt=""
+                                                    class="form__input-icon-error"
+                                                />
+                                            </div>
+                                            <!-- <p class="form__error">Password must be at least 6 characters</p> -->
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <a href="#!" class="cart-info__next-btn btn btn--primary btn--rounded"
+                                    >Thanh toán ngay</a
+                                >
+                            </div>
+                            <div class="cart-info">
+                                <a href="#!">
+                                    <article class="gift-item">
+                                        <div class="gift-item__icon-wrap">
+                                            <img src="./assets/icons/gift.svg" alt="" class="gift-item__icon" />
+                                        </div>
+                                        <div class="gift-item__content">
+                                            <h3 class="gift-item__title">Gửi đơn hàng này như 1 món quà.</h3>
+                                            <p class="gift-item__desc">
+                                                Các sản phẩm sẽ được vận chuyển tới người bạn muốn tặng.
+                                            </p>
+                                        </div>
+                                    </article>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+        <script type="text/javascript" src="./assets/js/cart.js"></script>
+    </body>
+</html>

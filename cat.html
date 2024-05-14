@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cat | Pet Mart</title>
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header-logined.html");
+        </script>
+        <!-- MAIN -->
+        <main class="pet">
+            <div class="container">
+                <div class="pet__container">
+                    <div class="search-bar d-none d-md-flex">
+                        <input type="text" name="" id="" placeholder="Tìm kiếm sản phẩm" class="search-bar__input" />
+                        <button class="search-bar__submit">
+                            <img src="./assets/icons/search.svg" alt="" class="search-bar__icon icon" />
+                        </button>
+                    </div>
+                </div>
+                <!-- Breadcrumbs -->
+                <div class="pet__container">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="./index-logined.html" class="breadcrumbs__link">
+                                Trang chủ
+                                <img src="./assets/icons/arrow-right.svg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" class="breadcrumbs__link">
+                                Giống thú cưng
+                                <img src="./assets/icons/arrow-right.svg" alt="" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link--current">Mèo</a>
+                        </li>
+                    </ul>
+                </div>
+                <section class="pet__container">
+                    <div class="pet__row">
+                        <h2 class="pet__heading">Mèo</h2>
+                        <div class="filter-wrap">
+                            <button class="filter-btn js-toggle" toggle-target="#pet-filter">
+                                Bộ lọc
+                                <img src="./assets/icons/filter.svg" alt="" class="filter-btn__icon icon" />
+                            </button>
+
+                            <div id="pet-filter" class="filter hide">
+                                <img src="./assets/icons/arrow-up.png" alt="" class="filter__arrow" />
+                                <h3 class="filter__heading">Bộ lọc</h3>
+                                <form action="" class="filter__form form">
+                                    <div class="filter__row filter__content">
+                                        <!-- Filter column 1 -->
+                                        <div class="filter__col">
+                                            <label for="" class="form__label">Giá</label>
+                                            <div class="filter__form-group">
+                                                <div
+                                                    class="filter__form-slider"
+                                                    style="--min-value: 10%; --max-value: 60%"
+                                                ></div>
+                                            </div>
+                                            <div class="filter__form-group filter__form-group--inline">
+                                                <div>
+                                                    <label for="" class="form__label form__label--small">
+                                                        Tối thiểu
+                                                    </label>
+                                                    <div class="filter__form-text-input filter__form-text-input--small">
+                                                        <input
+                                                            type="text"
+                                                            name=""
+                                                            id=""
+                                                            class="filter__form-input"
+                                                            value="300.00đ"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <label for="" class="form__label form__label--small">
+                                                        Tối đa
+                                                    </label>
+                                                    <div class="filter__form-text-input filter__form-text-input--small">
+                                                        <input
+                                                            type="text"
+                                                            name=""
+                                                            id=""
+                                                            class="filter__form-input"
+                                                            value="1.000.000đ"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__row filter__footer">
+                                        <button
+                                            class="btn btn--text filter__cancel js-toggle"
+                                            toggle-target="#home-filter"
+                                        >
+                                            Hủy
+                                        </button>
+                                        <button
+                                            class="btn btn--primary filter__submit js-toggle"
+                                            toggle-target="#home-filter"
+                                        >
+                                            Xem kết quả
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cols-4 row-cols-lg-2 row-cols-sm-1 g-3">
+                        <!-- Product card 1 -->
+                        <div class="col">
+                            <article class="product-card">
+                                <div class="product-card__img-wrap">
+                                    <a href="./product-detail.html">
+                                        <img src="./assets/img/pet/cat/cat-1.jfif" alt="" class="product-card__thumb" />
+                                    </a>
+                                    <button class="like-btn product-card__like-btn">
+                                        <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                                        <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                    </button>
+                                </div>
+                                <h3 class="product-card__title">
+                                    <a href="./product-detail.html">Mèo Anh lông ngắn xám xanh</a>
+                                </h3>
+                                <p class="product-card__brand">Trại Petmart</p>
+                                <div class="product-card__row">
+                                    <span class="product-card__price">Liên hệ</span>
+                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                    <span class="product-card__score">4.3</span>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Product card 2 -->
+                        <div class="col">
+                            <article class="product-card">
+                                <div class="product-card__img-wrap">
+                                    <a href="./product-detail.html">
+                                        <img src="./assets/img/pet/cat/cat-2.jpg" alt="" class="product-card__thumb" />
+                                    </a>
+                                    <button class="like-btn product-card__like-btn">
+                                        <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                                        <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                    </button>
+                                </div>
+                                <h3 class="product-card__title">
+                                    <a href="./product-detail.html">Mèo anh lông ngắn trắng</a>
+                                </h3>
+                                <p class="product-card__brand">Trại Petmart</p>
+                                <div class="product-card__row">
+                                    <span class="product-card__price">Liên hệ</span>
+                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                    <span class="product-card__score">3.4</span>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Product card 3 -->
+                        <div class="col">
+                            <article class="product-card">
+                                <div class="product-card__img-wrap">
+                                    <a href="./product-detail.html">
+                                        <img src="./assets/img/pet/cat/cat-3.jpg" alt="" class="product-card__thumb" />
+                                    </a>
+                                    <button class="like-btn like-btn--liked product-card__like-btn">
+                                        <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                                        <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                    </button>
+                                </div>
+                                <h3 class="product-card__title">
+                                    <a href="./product-detail.html">Mèo anh lông ngắn golden</a>
+                                </h3>
+                                <p class="product-card__brand">Trại Petmart</p>
+                                <div class="product-card__row">
+                                    <span class="product-card__price">Liên hệ</span>
+                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                    <span class="product-card__score">5.0</span>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Product card 4 -->
+                        <div class="col">
+                            <article class="product-card">
+                                <div class="product-card__img-wrap">
+                                    <a href="./product-detail.html">
+                                        <img src="./assets/img/pet/cat/cat-4.jpg" alt="" class="product-card__thumb" />
+                                    </a>
+                                    <button class="like-btn product-card__like-btn">
+                                        <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                                        <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                    </button>
+                                </div>
+                                <h3 class="product-card__title">
+                                    <a href="./product-detail.html">Mèo anh lông ngắn silver</a>
+                                </h3>
+                                <p class="product-card__brand">Trại Petmart</p>
+                                <div class="product-card__row">
+                                    <span class="product-card__price">Liên hệ</span>
+                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                    <span class="product-card__score">4.4</span>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Product card 5 -->
+                        <div class="col">
+                            <article class="product-card">
+                                <div class="product-card__img-wrap">
+                                    <a href="./product-detail.html">
+                                        <img src="./assets/img/pet/cat/cat-5.jpg" alt="" class="product-card__thumb" />
+                                    </a>
+                                    <button class="like-btn product-card__like-btn">
+                                        <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                                        <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                    </button>
+                                </div>
+                                <h3 class="product-card__title">
+                                    <a href="./product-detail.html">Mèo ba tư trắng</a>
+                                </h3>
+                                <p class="product-card__brand">Trại Petmart</p>
+                                <div class="product-card__row">
+                                    <span class="product-card__price">Liên hệ</span>
+                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                    <span class="product-card__score">4.3</span>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Product card 6 -->
+                        <div class="col">
+                            <article class="product-card">
+                                <div class="product-card__img-wrap">
+                                    <a href="./product-detail.html">
+                                        <img src="./assets/img/pet/cat/cat-6.jpg" alt="" class="product-card__thumb" />
+                                    </a>
+                                    <button class="like-btn product-card__like-btn">
+                                        <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                                        <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                    </button>
+                                </div>
+                                <h3 class="product-card__title">
+                                    <a href="./product-detail.html">Mèo scottish fold silver</a>
+                                </h3>
+                                <p class="product-card__brand">Trại Petmart</p>
+                                <div class="product-card__row">
+                                    <span class="product-card__price">Liên hệ</span>
+                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                    <span class="product-card__score">3.4</span>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Product card 7 -->
+                        <div class="col">
+                            <article class="product-card">
+                                <div class="product-card__img-wrap">
+                                    <a href="./product-detail.html">
+                                        <img src="./assets/img/pet/cat/cat-7.jpg" alt="" class="product-card__thumb" />
+                                    </a>
+                                    <button class="like-btn like-btn--liked product-card__like-btn">
+                                        <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                                        <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                    </button>
+                                </div>
+                                <h3 class="product-card__title">
+                                    <a href="./product-detail.html">Mèo bengal</a>
+                                </h3>
+                                <p class="product-card__brand">Trại Petmart</p>
+                                <div class="product-card__row">
+                                    <span class="product-card__price">Liên hệ</span>
+                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                    <span class="product-card__score">5.0</span>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Product card 8 -->
+                        <div class="col">
+                            <article class="product-card">
+                                <div class="product-card__img-wrap">
+                                    <a href="./product-detail.html">
+                                        <img src="./assets/img/pet/cat/cat-8.jpg" alt="" class="product-card__thumb" />
+                                    </a>
+                                    <button class="like-btn product-card__like-btn">
+                                        <img src="./assets/icons/heart.svg" alt="" class="like-btn__icon icon" />
+                                        <img src="./assets/icons/heart-red.svg" alt="" class="like-btn__icon--liked" />
+                                    </button>
+                                </div>
+                                <h3 class="product-card__title">
+                                    <a href="./product-detail.html">Mèo mỹ tai xoắn</a>
+                                </h3>
+                                <p class="product-card__brand">Trại Petmart</p>
+                                <div class="product-card__row">
+                                    <span class="product-card__price">Liên hệ</span>
+                                    <img src="./assets/icons/star.svg" alt="" class="product-card__star" />
+                                    <span class="product-card__score">4.4</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+    </body>
+</html>
